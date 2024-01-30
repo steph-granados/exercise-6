@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Random Generator</title>
+  </head>
+  <body>
+    <div
+      id="emoticonDisplay"
+      style="font-size: 150px; text-align: center; margin-top: 20%"
+    ></div>
+    <script>
+      // Define an array of emoticons for rock, paper, and scissors
+      var emoticons = [
+        "🪨", // Rock (Raised Fist Emoji)
+        "📄", // Paper (Raised Hand Emoji)
+        "✂️", // Scissors (Victory Hand Emoji)
+      ];
+
+      document.addEventListener("click", function () {
+        // Generate a random index based on the array length
+        var randomIndex = Math.floor(Math.random() * emoticons.length);
+
+        // Select an emoticon from the array using the random index
+        var selectedEmoticon = emoticons[randomIndex];
+
+        // Display the selected emoticon
+        document.getElementById("emoticonDisplay").innerHTML = selectedEmoticon;
+
+        // Logging the emoticon and random index
+        console.log("Selected Emoticon:", selectedEmoticon);
+        console.log("Random Index:", randomIndex);
+      });
+    </script>
+  </body>
+</html>
